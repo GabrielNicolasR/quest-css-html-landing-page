@@ -1,0 +1,80 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header header"
+                            "hero hero"
+                            "footer footer";
+    grid-template-rows: repeat(3, 1fr);
+    background-image: url('../images/bg-desktop.svg');
+    background-color: var(--cor-padrao);
+    background-size: cover;
+}
+
+.container .header {
+    grid-area: header;
+    grid-column: 1;
+    margin: 5rem;
+}
+
+.container .hero {
+    grid-area: hero;
+    grid-row: 2;
+}   
+
+.container .hero img {
+    padding-left: 10rem;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    grid-area: 2 / 3 / 2 / 3;
+    padding: 2rem 5rem;
+}
+
+.content .title {
+    font-size: 3rem;
+}
+
+.content .description {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.content .btn-register { 
+    border-radius: 3rem;
+    border-style: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: var(--cor-padrao);
+    margin-top: 20px;
+    padding: 1.6rem 7rem;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content .btn-register:hover {
+    background-color: var(--cor-hover);
+    color: #fff;
+}
+
+.footer {
+    grid-area: footer;
+    grid-area: 3 / 4 / 3 / 4;
+}
+
+.footer .social {
+    padding: 0 5rem;
+}
+
+.footer .social i {
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.8rem;
+}
