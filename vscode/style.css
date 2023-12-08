@@ -4,13 +4,17 @@ html {
     color: #fff;
 }
 
+main {
+    height: 100vh;
+}
+
 .container {
     height: 100vh;
     display: grid;
     grid-template-areas: "header header"
                             "hero hero"
                             "footer footer";
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     background-image: url('../images/bg-desktop.svg');
     background-color: var(--cor-padrao);
     background-size: cover;
@@ -19,7 +23,15 @@ html {
 .container .header {
     grid-area: header;
     grid-column: 1;
-    margin: 5rem;
+    padding: 5rem;
+}
+
+.container .header img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.container .header img:hover {
+    transform: scale(1.1);
 }
 
 .container .hero {
@@ -35,7 +47,7 @@ html {
     display: flex;
     flex-direction: column;
     grid-area: 2 / 3 / 2 / 3;
-    padding: 2rem 5rem;
+    padding: 5rem 2.5rem;
 }
 
 .content .title {
@@ -50,7 +62,7 @@ html {
 .content .btn-register { 
     border-radius: 3rem;
     border-style: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     color: var(--cor-padrao);
     margin-top: 20px;
     padding: 1.6rem 7rem;
@@ -66,15 +78,24 @@ html {
 
 .footer {
     grid-area: footer;
-    grid-area: 3 / 4 / 3 / 4;
+    grid-area: 4 / 4 / span 1 / span 1;
 }
 
 .footer .social {
-    padding: 0 5rem;
+    padding: 0rem;
 }
+
 
 .footer .social i {
     color: #fff;
     font-size: 2rem;
     padding: 0.8rem;
+}
+
+.footer .social i {
+    transition: 0.3s;
+}
+
+.footer .social i:hover {
+    color: var(--cor-hover);
 }
